@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What2Eat?</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flat-ui.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">
+            <a id="btn-w2e" class="btn btn-primary btn-lg btn-block" href="#">Tell me what2eat!</a>
+        </div>
+        <div class="col-xs-4"></div>
+    </div>
+    <script type="text/javascript" href="{{ url_for('static', filename='js/jquery-2.2.3.js') }}"></script>
+    <script type="text/javascript">
+        document.getElementById("btn-w2e").addEventListener("click", function(e) {
+        })
+    </script>
+</body>
+</html>
