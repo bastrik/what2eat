@@ -22,11 +22,13 @@ class User:
 
 @app.route("/")
 def index():
-    names = r.lrange('restaurants', 0, -1)
+    # names = r.lrange('restaurants', 0, -1)
+    names = ['PHO', 'WRJB']
     if names is None:
         return 'No restaurants are set up. visit /config to add more restaurants.'
     else:
-        return random.choice(names)
+        # return random.choice(names)
+        return render_template('index.html', names=names)
 
 
 @app.route('/login', methods=['POST'])
@@ -60,4 +62,5 @@ def auth_admin(request):
 
 
 if __name__ == '__main__':
-    app.run(port=8080, debug=True)
+    # app.run(port=8080, debug=True)
+    app.run(host='0.0.0.0', port=80)
